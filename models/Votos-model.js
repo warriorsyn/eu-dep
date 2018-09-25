@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('naboo.mongodb.umbler.com:50269', {useNewUrlParser: true});
+let CONNECTION_URL = process.env.MONGODB_URI || 'mongodb://admin:2001victor@ds133152.mlab.com:33152/time_plus';
+mongoose.connect(CONNECTION_URL, {useNewUrlParser: true});
 const Schema = mongoose.Schema;
 
 let Votes = new Schema({
