@@ -8,6 +8,7 @@ const cors = require('./config/cors');
 let app = express();
 let port = process.env.PORT || 3000
 
+app.get('/', (req, res) => {res.send("<H1>Welcome to euDep api</H1>")})
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
